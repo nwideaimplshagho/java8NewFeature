@@ -19,6 +19,14 @@ public class Student {
 		this.activityList = activityList;
 	}
 
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Student(String name) {
+		this.name = name;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -60,7 +68,6 @@ public class Student {
 	}
 	
 	public void printListOfActivities(){
-
         System.out.println("List of Activities are : " + this.activityList);
     }
 	
