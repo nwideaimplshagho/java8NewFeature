@@ -10,6 +10,7 @@ public class Student {
 	private double gpa;
 	private String gender;
 	private List<String> activityList = new ArrayList<String>(1);
+	private int noteBook;
 
 	public Student(String name, int gradeLevel, double gpa, String gender, List<String> activityList) {
 		this.name = name;
@@ -18,7 +19,16 @@ public class Student {
 		this.gender = gender;
 		this.activityList = activityList;
 	}
-
+	
+	public Student(String name, int gradeLevel, double gpa, String gender, List<String> activityList,int noteBook) {
+		this.name = name;
+		this.gradeLevel = gradeLevel;
+		this.gpa = gpa;
+		this.gender = gender;
+		this.activityList = activityList;
+		this.noteBook = noteBook;
+	}
+	
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
@@ -71,6 +81,14 @@ public class Student {
         System.out.println("List of Activities are : " + this.activityList);
     }
 	
+	public int getNoteBook() {
+		return noteBook;
+	}
+
+	public void setNoteBook(int noteBook) {
+		this.noteBook = noteBook;
+	}
+
 	@Override
 	public String toString() {
 		return "Student{" +
@@ -79,6 +97,7 @@ public class Student {
                 ", gpa=" + gpa +
                 ", gender='" + gender + '\'' +
                 ", activities=" + activityList +
+                ", notebook=" + noteBook + '\''+
                 '}';
 	}
 
