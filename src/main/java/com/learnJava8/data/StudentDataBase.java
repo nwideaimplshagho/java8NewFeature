@@ -2,9 +2,17 @@ package com.learnJava8.data;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Supplier;
 
 public class StudentDataBase {
 
+	public static Supplier<Student> studentSupplier = () -> {
+		Student stu = new Student("Adam", 3, 3.6, "male", Arrays.asList("swimming", "basketball", "volleyball"),15);
+		stu.setTution(Optional.ofNullable(new Tution("History", "Mr. Vaid")));
+		return  stu;
+	};
+	
 	public static List<Student> getAllStudents() {
 		/**
 		 * 2nd grade students
